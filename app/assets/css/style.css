@@ -1,0 +1,97 @@
+:root {
+  --Primary: #26B4BC;
+  --White: #ffffff;  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Primary);
+}
+
+.wrapper {
+  max-inline-size: 900px;
+  margin: auto;
+}
+
+.player{
+  margin-block-start: 32px;
+  position: relative;
+}
+
+.player-overlay{
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: .3s opacity;
+}
+.player:hover .player-overlay{
+  opacity: 1;
+}
+
+.player video {
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.player-title {
+  color: white;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 20px;
+}
+
+.player-actions {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.player-progress {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline: 0;
+  display: flex;
+  padding: 10px;
+}
+
+.player-progress input {
+  flex: 1;
+}
+
+.button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: 32px;
+  block-size: 32px;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(.9);
+}
+
+#backward {
+  background-image: url("../images/-10.svg");
+}
+#forward {
+  background-image: url("../images/+10.svg");
+}
+#play {
+  background-image: url("../images/play.svg");
+}
+#pause {
+  background-image: url("../images/pause.svg");
+}
