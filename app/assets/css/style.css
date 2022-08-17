@@ -43,8 +43,8 @@ body {
 .player-title {
   color: white;
   position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 20px;
+  inset-block-start: 16px;
+  inset-inline-start: 16px;
 }
 
 .player-actions {
